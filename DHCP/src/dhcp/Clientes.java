@@ -5,6 +5,8 @@
 
 package dhcp;
 
+import java.util.Date;
+
 
 /**
  * Clase con la información del cliente asociado con
@@ -25,6 +27,9 @@ public class Clientes {
     private String gateway;
     int lease;
     private boolean forzado;
+    private String horaInicio;
+    private String horaVencimiento;
+    private Date dateVencimiento;
 
     /**
      * Constructor de la clase cliente
@@ -36,8 +41,10 @@ public class Clientes {
         this.dirIP = dirIP;
         mask = "";
         DNS = "";
-        lease = 0;
+        lease = DHCPDatabase.getLease();
         forzado = false;
+        horaInicio = darHoraInicio();
+        horaVencimiento = darHoraVencimiento();
     }
 
 
@@ -104,7 +111,36 @@ public class Clientes {
     public void setMask(String mask) {
         this.mask = mask;
     }
-    
+	private String darHoraInicio() {
+		Date date = new Date();
+		return "" + date.getHours() + ":" + date.getMinutes() + ":"
+				+ date.getSeconds();
+	}
+
+	private String darHoraVencimiento() {
+		dateVencimiento = new Date(new Date().getTime() + lease * 1000);
+		return "" + dateVencimiento.getHours() + ":" + dateVencimiento.getMinutes() + ":"
+				+ dateVencimiento.getSeconds();
+	}
+
+
+	public Date getDateVencimiento() {
+		return dateVencimiento;
+	}
+
+
+	public String getHoraInicio() {
+		return horaInicio;
+	}
+
+
+	public String getHoraVencimiento() {
+		return horaVencimiento;
+	}
+	public void renovar(){
+        horaInicio = darHoraInicio();
+        horaVencimiento = darHoraVencimiento();
+	}
    
 
 }

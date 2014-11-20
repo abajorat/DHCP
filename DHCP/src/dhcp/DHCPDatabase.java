@@ -12,32 +12,38 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Observable;
+import java.util.Observer;
 import java.util.Properties;
 import java.util.StringTokenizer;
-
 
 /**
  * Clase que se encarga de cargar la configuración del servidor
  * 
  * @author Daniel Serrano Pardo
  */
-public class DHCPDatabase {
+public class DHCPDatabase extends Observable {
 
 	// Única instancia de DHCPDatabase
 	private static DHCPDatabase _database = null;
 
-	public static ArrayList<String>[] direcciones;
+	private static ArrayList<String>[] direcciones;
 
-	public static ArrayList<String> ip;
-	public static ArrayList<String> mascara;
-	public static ArrayList<String> dns;
-	public static ArrayList<String> gateway;
-	public static int lease;
-	public static int numDirecciones;
+	private static ArrayList<String> net;
+	static ArrayList<String> mascara;
+	private static ArrayList<String> dns;
+	private static ArrayList<String> gateway;
+	private static int lease;
 
-	public static ArrayList<Clientes> clientes = new ArrayList<Clientes>();
+	public static ArrayList<Clientes> getClientes() {
+		return clientes;
+	}
 
-	public DHCPDatabase() {
+	private static ArrayList<String> dirDisponibles;
+
+	private static ArrayList<Clientes> clientes = new ArrayList<Clientes>();
+
+	private DHCPDatabase() {
 		cargarConfiguracion();
 	}
 
@@ -53,32 +59,36 @@ public class DHCPDatabase {
 	 */
 
 	public static void cargarConfiguracion() {
+
 		Properties propiedades = new Properties();
-		ip = new ArrayList<String>();
+		net = new ArrayList<String>();
 		mascara = new ArrayList<String>();
 		dns = new ArrayList<String>();
 		gateway = new ArrayList<String>();
 		InputStream in = null;
+		dirDisponibles = new ArrayList<String>();
 		try {
+
 			in = new FileInputStream("config.properties");
 			propiedades.load(in);
 
 			lease = Integer.parseInt(propiedades.getProperty("lease"));
 			int numberSubnets = Integer.parseInt(propiedades
 					.getProperty("numberSubnets"));
-			direcciones = new ArrayList [numberSubnets]; 
-			for (int i = 0; i < numberSubnets; i++) {
-				ip.
-				add(
-						propiedades.getProperty("ip" + i));
+			direcciones = new ArrayList[numberSubnets];
+			net.add(propiedades.getProperty("ownNet"));
+			mascara.add(propiedades.getProperty("ownMask"));
+			dns.add(propiedades.getProperty("ownDns"));
+			gateway.add(propiedades.getProperty("ownGateway"));
+			direcciones[0] = obtenerDirecciones(0);
+
+			for (int i = 0; i < numberSubnets - 1; i++) {
+				net.add(propiedades.getProperty("net" + i));
 				mascara.add(propiedades.getProperty("mascara" + i));
 				dns.add(propiedades.getProperty("dns" + i));
 				gateway.add(propiedades.getProperty("gateway" + i));
-				direcciones[i] = obtenerDirecciones(i);
+				direcciones[i + 1] = obtenerDirecciones(i + 1);
 			}
-
-			
-
 
 		} catch (IOException e) {
 			System.err.println("Error al cargar el archivo: " + e);
@@ -97,17 +107,17 @@ public class DHCPDatabase {
 
 	private static ArrayList<String> obtenerDirecciones(int j) {
 		ArrayList<String> retorno = new ArrayList<String>();
-		String temp = ip.get(j);
-		
+		String temp = net.get(j);
+
 		StringTokenizer st;
 		st = new StringTokenizer(temp, ".");
 		int primero = Integer.parseInt(st.nextToken());
 		int segundo = Integer.parseInt(st.nextToken());
 		int tercero = Integer.parseInt(st.nextToken());
-		int cuarto = Integer.parseInt(st.nextToken());
-		System.out.println(computeSize(j));
-		for (int i = 0; i < computeSize(j); i++) {
-			
+		int cuarto = Integer.parseInt(st.nextToken()) + 1;
+
+		for (int i = 1; i < computeSize(j); i++) {
+
 			cuarto++;
 			if (cuarto == 256) {
 				cuarto = 0;
@@ -125,6 +135,7 @@ public class DHCPDatabase {
 					+ "." + String.valueOf(tercero) + "."
 					+ String.valueOf(cuarto);
 			retorno.add(temp);
+			dirDisponibles.add(temp);
 		}
 		return retorno;
 	}
@@ -136,7 +147,13 @@ public class DHCPDatabase {
 		int tercero = Integer.parseInt(st.nextToken());
 		int cuarto = Integer.parseInt(st.nextToken());
 		return 256 * 256 * 256 * 256 - primero * 256 * 256 * 256 - segundo
-				* 256 * 256 - tercero * 256 - cuarto - 1;
+				* 256 * 256 - tercero * 256 - cuarto - 2;
+
+	}
+
+	public static void imprimirDireccionesDisponibles() {
+		for (int i = 0; i < dirDisponibles.size(); i++)
+			System.out.println(dirDisponibles.get(i));
 
 	}
 
@@ -156,8 +173,13 @@ public class DHCPDatabase {
 
 	public boolean existeCliente(String MAC) {
 		for (int i = 0; i < clientes.size(); i++)
-			if (MAC.equalsIgnoreCase(clientes.get(i).getIdCliente()))
+			if (MAC.equalsIgnoreCase(clientes.get(i).getIdCliente())) {
+				clientes.get(i).renovar();
+				dirDisponibles.remove(clientes.get(i).getDirIP());
+				setChanged();
+				notifyObservers();
 				return true;
+			}
 		return false;
 	}
 
@@ -200,14 +222,17 @@ public class DHCPDatabase {
 		leaseNr = lease;
 		doNaSe = dns.get(i);
 
-		if (!direcciones[i].isEmpty()) {
+		if (!dirDisponibles.isEmpty()) {
 			Clientes nuevo = new Clientes(MAC, direcciones[i].get(0));
 			clientes.add(nuevo);
 			nuevo.setDNS(doNaSe);
 			nuevo.setLease(lease);
 			nuevo.setMask(mask);
 			nuevo.setGateway(gate);
-			return direcciones[i].remove(0);
+			dirDisponibles.remove(direcciones[i].get(0));
+			setChanged();
+			notifyObservers();
+			return direcciones[i].get(0);
 		} else {
 			System.out.println("El array list esta vacio");
 			return null;
@@ -216,8 +241,10 @@ public class DHCPDatabase {
 	}
 
 	public int identificarSubRed(String giaddr) {
-		
-		for (int i = 1; i < direcciones.length; i++) {
+		if (giaddr.equals("0.0.0.0")) {
+			return 0;
+		}
+		for (int i = 0; i < direcciones.length; i++) {
 			if (direcciones[i].contains(giaddr)) {
 				return i;
 			}
@@ -245,13 +272,13 @@ public class DHCPDatabase {
 		for (int i = 0; i < clientes.size(); i++)
 			if (MAC.equalsIgnoreCase(clientes.get(i).getIdCliente())) {
 				if (!clientes.get(i).getForzado()) {
-					int n =  identificarSubRed(giaddr);
-
-					direcciones[n].add(clientes.get(i).getDirIP());
+					// dirDisponibles.add(clientes.get(i).getDirIP());
 				}
 				retorno = clientes.get(i).getDirIP();
 				clientes.remove(i);
 			}
+		setChanged();
+		notifyObservers();
 		return retorno;
 	}
 
@@ -271,6 +298,8 @@ public class DHCPDatabase {
 
 	public int buscarIp(String ip) {
 		int n = identificarSubRed(ip);
+		if (n == -1)
+			return -1;
 		for (int i = 0; i < direcciones[n].size(); i++) {
 			if (direcciones[n].get(i).equals(ip))
 				return i;
@@ -283,7 +312,10 @@ public class DHCPDatabase {
 		int n = identificarSubRed(giaddr);
 		Clientes nuevo = new Clientes(MAC, direcciones[n].get(indice));
 		clientes.add(nuevo);
-		return direcciones[n].remove(indice);
+		dirDisponibles.remove(direcciones[n].get(indice));
+		setChanged();
+		notifyObservers();
+		return direcciones[n].get(indice);
 	}
 
 	public void liberarIP(String MAC, String giaddr) {
@@ -291,10 +323,9 @@ public class DHCPDatabase {
 		for (i = 0; i < clientes.size(); i++) {
 			if (MAC.equalsIgnoreCase(clientes.get(i).getIdCliente())) {
 				Clientes c = clientes.remove(i);
-				if (!c.getForzado()) {
-					int n = identificarSubRed(giaddr);
-					direcciones[n].add(c.getDirIP());
-				}
+
+				dirDisponibles.add(c.getDirIP());
+
 				break;
 			}
 		}
@@ -308,12 +339,48 @@ public class DHCPDatabase {
 				break;
 			}
 		}
+		setChanged();
+		notifyObservers();
 	}
 
 	public void agregarClienteForzado(String MAC, String IP) {
 		Clientes nuevo = new Clientes(MAC, IP);
 		nuevo.setForzado(true);
 		clientes.add(nuevo);
+		setChanged();
+		notifyObservers();
+	}
+	public void modelChanged(){
+		setChanged();
+		notifyObservers();
+	}
+
+	public static ArrayList<String>[] getDirecciones() {
+		return direcciones;
+	}
+
+	public static ArrayList<String> getNet() {
+		return net;
+	}
+
+	public static ArrayList<String> getMascara() {
+		return mascara;
+	}
+
+	public static ArrayList<String> getDns() {
+		return dns;
+	}
+
+	public static ArrayList<String> getGateway() {
+		return gateway;
+	}
+
+	public static int getLease() {
+		return lease;
+	}
+
+	public static ArrayList<String> getDirDisponibles() {
+		return dirDisponibles;
 	}
 
 }
