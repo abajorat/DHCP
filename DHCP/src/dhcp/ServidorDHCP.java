@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.net.NoRouteToHostException;
 import java.net.UnknownHostException;
 import java.util.Date;
 import java.util.Observable;
@@ -48,10 +49,9 @@ public class ServidorDHCP extends Thread {
 
 	public static void main(String[] args) throws Exception {
 		try {
-			
+
 			ServidorDHCP.getInstance().start();
 
-			
 		} catch (Exception e) {
 			System.out.println("Error principal: " + e.getMessage() + e);
 			throw e;
@@ -177,7 +177,14 @@ public class ServidorDHCP extends Thread {
 				DHCPlog.reportar("Recibido DISCOVERY de: ["
 						+ pack.getStringHexa(pack.getCHADDR()) + "] || FECHA: "
 						+ new Date());
-				manejarDiscovery();
+
+				try {
+					manejarDiscovery();
+				} catch (NoRouteToHostException e) {
+					// TODO Auto-generated catch block
+					System.err
+							.println("No pudo ser mandado: " + e.getMessage());
+				}
 				break;
 			case PaqueteDHCP.REQUEST:
 				System.out.println("REQUEST "
@@ -259,15 +266,19 @@ public class ServidorDHCP extends Thread {
 			}
 			tempId = String.format("%d.%d.%d.%d", dirAux[0], dirAux[1],
 					dirAux[2], dirAux[3]);
-			int indiceIP = database.buscarIp(tempId);
 
-			if (indiceIP != -1) {
+			if(tempId.equals(database.getOwnIp())){
+				sendNak();
+				return;
+			}
 
-				tempId = database.sacarIP(indiceIP,
-						pack.getStringHexa(pack.getCHADDR()),
-						IPdesdeByte(pack.getGIADDR()));
+			else if (database.existeIp(tempId)) {
 
-			} else {
+				 database.sacarIP(
+				 pack.getStringHexa(pack.getCHADDR()),
+				 IPdesdeByte(pack.getCIADDR()));
+				
+				 } else {
 
 				tempId = database.getIPLibre(
 						pack.getStringHexa(pack.getCHADDR()),
@@ -277,7 +288,6 @@ public class ServidorDHCP extends Thread {
 
 			tempId = database.getIPLibre(pack.getStringHexa(pack.getCHADDR()),
 					IPdesdeByte(pack.getGIADDR()));
-			System.out.println("Nuevo");
 		}
 		if (tempId == null) {
 			// no hay mas direcciones
@@ -306,8 +316,8 @@ public class ServidorDHCP extends Thread {
 			opt2[0] = (hexToByte(Integer.toHexString(1))); // Subnet Mask
 			opt2[1] = (hexToByte(Integer.toHexString(4))); // lenght
 			byte[] aux = new byte[4];
-			aux = pack.getIPOfStr(database.getMascara().get(database
-					.identificarSubRed(tempId)));// máscara
+			aux = pack.getIPOfStr(database.getMascara().get(
+					database.identificarSubRed(tempId)));// máscara
 			opt2[2] = aux[0];
 			opt2[3] = aux[1];
 			opt2[4] = aux[2];
@@ -316,8 +326,8 @@ public class ServidorDHCP extends Thread {
 
 			opt2[0] = (hexToByte(Integer.toHexString(3))); // opción router
 			opt2[1] = (hexToByte(Integer.toHexString(4))); // lenght
-			aux = pack.getIPOfStr(database.getGateway().get(database
-					.identificarSubRed(tempId)));// Gateway
+			aux = pack.getIPOfStr(database.getGateway().get(
+					database.identificarSubRed(tempId)));// Gateway
 			opt2[2] = aux[0];
 			opt2[3] = aux[1];
 			opt2[4] = aux[2];
@@ -338,8 +348,8 @@ public class ServidorDHCP extends Thread {
 
 			opt2[0] = (hexToByte(Integer.toHexString(6))); // Domain Name server
 			opt2[1] = (hexToByte(Integer.toHexString(4))); // lenght
-			aux = pack.getIPOfStr(database.getDns().get(database
-					.identificarSubRed(tempId)));
+			aux = pack.getIPOfStr(database.getDns().get(
+					database.identificarSubRed(tempId)));
 			opt2[2] = aux[0];
 			opt2[3] = aux[1];
 			opt2[4] = aux[2];
@@ -397,13 +407,10 @@ public class ServidorDHCP extends Thread {
 
 		if (opServ.getIntOption() == 54) { // si existe el identificador del
 											// servidor es respuesta a un offer
-			System.out.println("option 54");
 			InetAddress idServidor = InetAddress.getByAddress(opServ
 					.getValues());
-			System.out.println(idServidor);
 			if (idServidor.equals(InetAddress.getLocalHost())
 					|| idServidor.equals(InetAddress.getByName("192.168.0.1"))) {
-				System.out.println("richtiger server");
 				// SI escogio este servidor, entonces continua
 				// Confiamos en que el cliente envia la direccion ofrecida en la
 				// opcion IP Request
@@ -411,18 +418,15 @@ public class ServidorDHCP extends Thread {
 				TempIP = database.getIPdeMAC(pack.getStringHexa(pack
 						.getCHADDR()));
 			} else {
-				System.out.println("kein richtiger server");
 				// No escogio este servidor entonces se queda callado
 				return;
 			}
 
 		} else {// No tiene el id del servidor por ende no es respuesta a un
 				// offer
-			System.out.println("nicht 54");
 			String ipPedida = getRequestedIP(pack);
 
 			if (database.existeCliente(pack.getStringHexa(pack.getCHADDR()))) {
-				System.out.println("kenn ich schon");
 
 				TempIP = database.getIPdeMAC(pack.getStringHexa(pack
 						.getCHADDR()));
@@ -436,25 +440,11 @@ public class ServidorDHCP extends Thread {
 				// Se confia en que tiene la direccion correcta que es la que yo
 				// tengo en la base de datos.
 				// se hace unicast:
-				
-				unicast = pack.getCIADDR();
-				System.out.println("renew");
 
+				unicast = pack.getCIADDR();
 			} else if (!ipPedida.equals(TempIP)) { // esta mal le envio un NAK
-				System.out.println("maaloooo");
-				PaqueteDHCP nak = generarNak(pack);
-				byte[] broadcast = { hexToByte("FF"), hexToByte("FF"),
-						hexToByte("FF"), hexToByte("FF") };// Broadcast
-				DatagramPacket ep = new DatagramPacket(nak.getData(),
-						nak.getLengthData(),
-						InetAddress.getByAddress(broadcast), 68);
-				socket.send(ep);
-				System.out.println("NACK "
-						+ pack.getStringHexa(pack.getCHADDR()));
-				DHCPlog.reportar("Se envió DHCP_NAK a: ["
-						+ pack.getStringHexa(pack.getCHADDR())
-						+ "]  || FECHA: " + new Date());
-				return;
+					sendNak();
+					return;
 			}
 
 		}
@@ -496,8 +486,8 @@ public class ServidorDHCP extends Thread {
 			opt2[0] = (hexToByte(Integer.toHexString(1))); // Subnet Mask
 			opt2[1] = (hexToByte(Integer.toHexString(4))); // lenght
 			byte[] aux = new byte[4];
-			aux = pack.getIPOfStr(database.getMascara().get(database
-					.identificarSubRed(TempIP)));// máscara
+			aux = pack.getIPOfStr(database.getMascara().get(
+					database.identificarSubRed(TempIP)));// máscara
 			opt2[2] = aux[0];
 			opt2[3] = aux[1];
 			opt2[4] = aux[2];
@@ -506,8 +496,8 @@ public class ServidorDHCP extends Thread {
 
 			opt2[0] = (hexToByte(Integer.toHexString(3))); // opción router
 			opt2[1] = (hexToByte(Integer.toHexString(4))); // lenght
-			aux = pack.getIPOfStr(database.getGateway().get(database
-					.identificarSubRed(TempIP)));// Gateway
+			aux = pack.getIPOfStr(database.getGateway().get(
+					database.identificarSubRed(TempIP)));// Gateway
 			opt2[2] = aux[0];
 			opt2[3] = aux[1];
 			opt2[4] = aux[2];
@@ -526,8 +516,8 @@ public class ServidorDHCP extends Thread {
 
 			opt2[0] = (hexToByte(Integer.toHexString(6))); // Domain Name server
 			opt2[1] = (hexToByte(Integer.toHexString(4))); // lenght
-			aux = pack.getIPOfStr(database.getDns().get(DHCPDatabase.getInstance()
-					.identificarSubRed(TempIP)));
+			aux = pack.getIPOfStr(database.getDns().get(
+					DHCPDatabase.getInstance().identificarSubRed(TempIP)));
 			opt2[2] = aux[0];
 			opt2[3] = aux[1];
 			opt2[4] = aux[2];
@@ -569,6 +559,23 @@ public class ServidorDHCP extends Thread {
 		}
 	}
 
+	private void sendNak() throws UnknownHostException, IOException{
+		PaqueteDHCP nak = generarNak(pack);
+		byte[] broadcast = { hexToByte("FF"), hexToByte("FF"),
+				hexToByte("FF"), hexToByte("FF") };// Broadcast
+		DatagramPacket ep = new DatagramPacket(nak.getData(),
+				nak.getLengthData(),
+				InetAddress.getByAddress(broadcast), 68);
+		socket.send(ep);
+		System.out.println("NACK "
+				+ pack.getStringHexa(pack.getCHADDR()));
+		DHCPlog.reportar("Se envió DHCP_NAK a: ["
+				+ pack.getStringHexa(pack.getCHADDR())
+				+ "]  || FECHA: " + new Date());
+		
+		
+	}
+
 	/**
 	 * Método que elimina el cliente del servidor y devuelve la IP usada al
 	 * rango de direcciones disponibles
@@ -587,7 +594,7 @@ public class ServidorDHCP extends Thread {
 				+ database.eliminarCliente(
 						pack.getStringHexa(pack.getCHADDR()), giaddr)
 				+ "] || FECHA: " + new Date());
-	//	database.getDirDisponibles().add(giaddr);
+		// database.getDirDisponibles().add(giaddr);
 	}
 
 	private void manejarDecline() {
@@ -609,15 +616,15 @@ public class ServidorDHCP extends Thread {
 	@SuppressWarnings("static-access")
 	private void manejarInform() throws UnknownHostException, IOException {
 		String clientIP = IPdesdeByte(pack.getCIADDR());
+
+		
 		int subred = database.identificarSubRed(clientIP);
+		String giaddr = database.getGateway().get(subred);
 		if (subred != -1) {
 
-			int indice = database.buscarIp(clientIP);
-
-			String giaddr = IPdesdeByte(pack.getGIADDR());
-			if (indice != -1 && subred != -1)
-				database.sacarIP(indice, pack.getStringHexa(pack.getCHADDR()),
-						giaddr);
+			if (database.existeIp(clientIP)) {
+				database.sacarIP(pack.getStringHexa(pack.getCHADDR()), clientIP);
+			}
 			// Aqui ya quedo agregado el nuevo cliente.
 			else
 				// En caso de que no este la ip en el grupo de direcciones
@@ -653,8 +660,10 @@ public class ServidorDHCP extends Thread {
 			opt2[0] = (hexToByte(Integer.toHexString(1))); // Subnet Mask
 			opt2[1] = (hexToByte(Integer.toHexString(4))); // lenght
 			byte[] aux = new byte[4];
-			aux = pack.getIPOfStr(database.getMascara().get(database
-					.identificarSubRed(giaddr)));// máscara
+			aux = pack.getIPOfStr(database.
+					getMascara().
+					get(
+					database.identificarSubRed(clientIP)));// máscara
 			opt2[2] = aux[0];
 			opt2[3] = aux[1];
 			opt2[4] = aux[2];
@@ -663,8 +672,8 @@ public class ServidorDHCP extends Thread {
 
 			opt2[0] = (hexToByte(Integer.toHexString(3))); // opción router
 			opt2[1] = (hexToByte(Integer.toHexString(4))); // lenght
-			aux = pack.getIPOfStr(database.getGateway().get(database
-					.identificarSubRed(giaddr)));// Gateway
+			aux = pack.getIPOfStr(database.getGateway().get(
+					database.identificarSubRed(clientIP)));// Gateway
 			opt2[2] = aux[0];
 			opt2[3] = aux[1];
 			opt2[4] = aux[2];
@@ -673,8 +682,8 @@ public class ServidorDHCP extends Thread {
 
 			opt2[0] = (hexToByte(Integer.toHexString(6))); // Domain Name server
 			opt2[1] = (hexToByte(Integer.toHexString(4))); // lenght
-			aux = pack.getIPOfStr(database.getDns().get(database
-					.identificarSubRed(giaddr)));
+			aux = pack.getIPOfStr(database.getDns().get(
+					database.identificarSubRed(clientIP)));
 			opt2[2] = aux[0];
 			opt2[3] = aux[1];
 			opt2[4] = aux[2];
@@ -734,8 +743,6 @@ public class ServidorDHCP extends Thread {
 	private byte hexToByte(String s) {
 		return (byte) Integer.parseInt(s, 16);
 	}
-
-
 
 	public byte[] fragmentarInt(int x) {
 		byte[] arr = new byte[4];

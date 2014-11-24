@@ -11,6 +11,7 @@
 
 package dhcp;
 
+import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -201,13 +202,14 @@ public class Interfaz extends javax.swing.JFrame implements Observer {
 
 	// End of variables declaration//GEN-END:variables
 	@Override
-	public void update(Observable arg0, Object arg1) {
+	public synchronized void update(Observable arg0, Object arg1) {
 		defaultModel = new DefaultTableModel(null,s);
-		for(int i = 0; i < database.getClientes().size();i++){
-			defaultModel.addRow(new Object[]{database.getClientes().get(i).getIdCliente(),
-					database.getClientes().get(i).getDirIP(),
-					database.getClientes().get(i).getHoraInicio(),
-					database.getClientes().get(i).getHoraVencimiento()
+		for(Clientes c : new ArrayList<Clientes>(database.getClientes().values())){
+			defaultModel.
+			addRow(new Object[]{c.getIdCliente(),
+					c.getDirIP(),
+					c.getHoraInicio(),
+					c.getHoraVencimiento()
 					
 			});
 		}

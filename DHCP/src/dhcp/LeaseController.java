@@ -2,11 +2,12 @@ package dhcp;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 
 public class LeaseController extends Thread {
 
 	private DHCPDatabase database;
-	private ArrayList<Clientes> clientes;
+	private HashMap<String, Clientes> clientes;
 
 	public LeaseController(DHCPDatabase database) {
 		this.database = database;
@@ -16,11 +17,14 @@ public class LeaseController extends Thread {
 	public void run() {
 		Date date;
 		while (true) {
-			for (int i = 0; i < clientes.size(); i++) {
+			for (Clientes c : new ArrayList<Clientes>(clientes.values())) {
 				date = new Date();
-				if (date.getTime() > clientes.get(i).getDateVencimiento()
+				if (date.getTime() > c.getDateVencimiento()
 						.getTime()) {
-					clientes.remove(i);
+					synchronized(clientes){
+						clientes.remove(c.getIdCliente());
+					}
+					
 					database.modelChanged();
 
 				}

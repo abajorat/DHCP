@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Enumeration;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Observable;
@@ -34,14 +35,15 @@ public class DHCPDatabase extends Observable {
 	private static ArrayList<String> dns;
 	private static ArrayList<String> gateway;
 	private static int lease;
+	private static String ownIp;
 
-	public static ArrayList<Clientes> getClientes() {
+	public static HashMap<String,Clientes> getClientes() {
 		return clientes;
 	}
 
 	private static ArrayList<String> dirDisponibles;
 
-	private static ArrayList<Clientes> clientes = new ArrayList<Clientes>();
+	private static HashMap<String,Clientes> clientes = new HashMap<String,Clientes>();
 
 	private DHCPDatabase() {
 		cargarConfiguracion();
@@ -81,6 +83,8 @@ public class DHCPDatabase extends Observable {
 			dns.add(propiedades.getProperty("ownDns"));
 			gateway.add(propiedades.getProperty("ownGateway"));
 			direcciones[0] = obtenerDirecciones(0);
+			
+			
 
 			for (int i = 0; i < numberSubnets - 1; i++) {
 				net.add(propiedades.getProperty("net" + i));
@@ -89,10 +93,17 @@ public class DHCPDatabase extends Observable {
 				gateway.add(propiedades.getProperty("gateway" + i));
 				direcciones[i + 1] = obtenerDirecciones(i + 1);
 			}
+			dirDisponibles.remove(ownIp=propiedades.getProperty("ownIp"));
+			
+			direcciones[0].remove(ownIp);
 
 		} catch (IOException e) {
 			System.err.println("Error al cargar el archivo: " + e);
 		}
+	}
+
+	public static String getOwnIp() {
+		return ownIp;
 	}
 
 	/**
@@ -172,14 +183,14 @@ public class DHCPDatabase extends Observable {
 	 */
 
 	public boolean existeCliente(String MAC) {
-		for (int i = 0; i < clientes.size(); i++)
-			if (MAC.equalsIgnoreCase(clientes.get(i).getIdCliente())) {
-				clientes.get(i).renovar();
-				dirDisponibles.remove(clientes.get(i).getDirIP());
-				setChanged();
-				notifyObservers();
-				return true;
-			}
+		if(clientes.containsKey(MAC)){
+			clientes.get(MAC).renovar();
+			dirDisponibles.remove(clientes.get(MAC).getDirIP());
+			setChanged();
+			notifyObservers();
+			return true;
+		}
+		
 		return false;
 	}
 
@@ -192,10 +203,10 @@ public class DHCPDatabase extends Observable {
 	 */
 
 	public String getIPdeMAC(String MAC) {
-		for (int i = 0; i < clientes.size(); i++)
-			if (MAC.equalsIgnoreCase(clientes.get(i).getIdCliente()))
-				return clientes.get(i).getDirIP();
-		return null;
+		if(!clientes.containsKey(MAC)){
+			return null;
+		}
+		return clientes.get(MAC).getDirIP();
 	}
 
 	/**
@@ -223,16 +234,25 @@ public class DHCPDatabase extends Observable {
 		doNaSe = dns.get(i);
 
 		if (!dirDisponibles.isEmpty()) {
-			Clientes nuevo = new Clientes(MAC, direcciones[i].get(0));
-			clientes.add(nuevo);
-			nuevo.setDNS(doNaSe);
-			nuevo.setLease(lease);
-			nuevo.setMask(mask);
-			nuevo.setGateway(gate);
-			dirDisponibles.remove(direcciones[i].get(0));
+			int j = 0;
+			while(!dirDisponibles.contains(direcciones[i].get(j))){
+				System.out.println(direcciones[i].get(j));
+				j++;
+			};
+			Clientes nuevo = new Clientes(MAC, direcciones[i].get(j));
+			synchronized(clientes){
+				clientes.put(MAC,nuevo);
+				nuevo.setDNS(doNaSe);
+				nuevo.setLease(lease);
+				nuevo.setMask(mask);
+				nuevo.setGateway(gate);
+			}
+			
+			dirDisponibles.remove(direcciones[i].get(j));
 			setChanged();
 			notifyObservers();
-			return direcciones[i].get(0);
+			System.out.println("getlibre sagt: " + direcciones[i].get(j));
+			return direcciones[i].get(j);
 		} else {
 			System.out.println("El array list esta vacio");
 			return null;
@@ -268,77 +288,65 @@ public class DHCPDatabase extends Observable {
 	}
 
 	public String eliminarCliente(String MAC, String giaddr) {
-		String retorno = null;
-		for (int i = 0; i < clientes.size(); i++)
-			if (MAC.equalsIgnoreCase(clientes.get(i).getIdCliente())) {
-				if (!clientes.get(i).getForzado()) {
-					// dirDisponibles.add(clientes.get(i).getDirIP());
-				}
-				retorno = clientes.get(i).getDirIP();
-				clientes.remove(i);
-			}
+		synchronized(clientes){
+			clientes.remove(MAC);
+			dirDisponibles.add(giaddr);
+		}
 		setChanged();
 		notifyObservers();
-		return retorno;
+		return giaddr;
 	}
 
 	public Clientes getCliente(String MAC) {
-		for (Clientes temp : clientes)
+		
+		for (Clientes temp : new ArrayList<Clientes>(clientes.values()) )
 			if (MAC.equalsIgnoreCase(temp.getIdCliente()))
 				return temp;
 		return null;
 	}
 
-	public int getIndice(String MAC) {
-		for (int i = 0; i < clientes.size(); i++)
-			if (MAC.equalsIgnoreCase(clientes.get(i).getIdCliente()))
-				return i;
-		return -1;
-	}
-
-	public int buscarIp(String ip) {
+	public boolean existeIp(String ip) {
 		int n = identificarSubRed(ip);
 		if (n == -1)
-			return -1;
-		for (int i = 0; i < direcciones[n].size(); i++) {
-			if (direcciones[n].get(i).equals(ip))
-				return i;
+			return false;
+		if(dirDisponibles.contains(ip)){
+			return false;
 		}
 
-		return -1;
+		return true;
 	}
 
-	public String sacarIP(int indice, String MAC, String giaddr) {
-		int n = identificarSubRed(giaddr);
-		Clientes nuevo = new Clientes(MAC, direcciones[n].get(indice));
-		clientes.add(nuevo);
-		dirDisponibles.remove(direcciones[n].get(indice));
+	public void sacarIP(String MAC, String ciaddr) {
+
+		
+		Clientes nuevo = new Clientes(MAC, ciaddr);
+		
+		synchronized(clientes){
+			clientes.put(MAC,nuevo);
+			
+		}
+		
 		setChanged();
 		notifyObservers();
-		return direcciones[n].get(indice);
+		
 	}
 
 	public void liberarIP(String MAC, String giaddr) {
-		int i = 0;
-		for (i = 0; i < clientes.size(); i++) {
-			if (MAC.equalsIgnoreCase(clientes.get(i).getIdCliente())) {
-				Clientes c = clientes.remove(i);
-
-				dirDisponibles.add(c.getDirIP());
-
-				break;
-			}
+		synchronized(clientes){
+			clientes.remove(MAC);
+			dirDisponibles.add(giaddr);
 		}
+		setChanged();
+		notifyObservers();
 
 	}
 
 	public void elminiarClienteDecline(String MAC) {
-		for (int i = 0; i < clientes.size(); i++) {
-			if (MAC.equalsIgnoreCase(clientes.get(i).getIdCliente())) {
-				clientes.remove(i);
-				break;
-			}
+		synchronized(clientes){
+			clientes.remove(MAC);
+			//dirDisponibles.add(giaddr);
 		}
+		//TODO poruqe no añadirlo a los disponibles ?
 		setChanged();
 		notifyObservers();
 	}
@@ -346,7 +354,9 @@ public class DHCPDatabase extends Observable {
 	public void agregarClienteForzado(String MAC, String IP) {
 		Clientes nuevo = new Clientes(MAC, IP);
 		nuevo.setForzado(true);
-		clientes.add(nuevo);
+		synchronized(clientes){
+			clientes.put(MAC,nuevo);
+		}
 		setChanged();
 		notifyObservers();
 	}
