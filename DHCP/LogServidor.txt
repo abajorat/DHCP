@@ -1461,3 +1461,548 @@ Recibido REQUEST de: [AC-FD-EC-C1-C8-6F] || FECHA: Sat Nov 22 02:05:57 COT 2014
 Se envió DHCP_ACK a: [AC-FD-EC-C1-C8-6F] con la IP: [192.168.0.11] || FECHA: Sat Nov 22 02:05:57 COT 2014
 Recibido REQUEST de: [AC-FD-EC-C1-C8-6F] || FECHA: Sat Nov 22 02:08:19 COT 2014
 Se envió DHCP_ACK a: [AC-FD-EC-C1-C8-6F] con la IP: [192.168.0.11] || FECHA: Sat Nov 22 02:08:19 COT 2014
+Recibido DISCOVERY de: [AC-16-2D-4F-96-2B] || FECHA: Tue Nov 25 12:33:41 COT 2014
+Se envió DHCP_OFFFER a: [AC-16-2D-4F-96-2B] con la IP: [192.168.0.2] || FECHA: Tue Nov 25 12:33:41 COT 2014
+Recibido REQUEST de: [AC-16-2D-4F-96-2B] || FECHA: Tue Nov 25 12:33:41 COT 2014
+Se envió DHCP_ACK a: [AC-16-2D-4F-96-2B] con la IP: [192.168.0.2] || FECHA: Tue Nov 25 12:33:41 COT 2014
+Recibido INFORM de : [00-1A-73-68-C3-F5] || FECHA: Tue Nov 25 12:34:34 COT 2014
+Se envió DHCP_ACK unicast a: [00-1A-73-68-C3-F5] con la IP: [192.168.0.10] || FECHA: Tue Nov 25 12:34:34 COT 2014
+Recibido DISCOVERY de: [AC-16-2D-4F-96-2B] || FECHA: Tue Nov 25 12:35:55 COT 2014
+Se envió DHCP_OFFFER a: [AC-16-2D-4F-96-2B] con la IP: [192.168.0.2] || FECHA: Tue Nov 25 12:35:55 COT 2014
+Recibido REQUEST de: [AC-16-2D-4F-96-2B] || FECHA: Tue Nov 25 12:35:55 COT 2014
+Se envió DHCP_ACK a: [AC-16-2D-4F-96-2B] con la IP: [192.168.0.2] || FECHA: Tue Nov 25 12:35:55 COT 2014
+Recibido INFORM de : [00-1A-73-68-C3-F5] || FECHA: Tue Nov 25 12:42:00 COT 2014
+Se envió DHCP_ACK unicast a: [00-1A-73-68-C3-F5] con la IP: [192.168.0.10] || FECHA: Tue Nov 25 12:42:00 COT 2014
+Recibido REQUEST de: [C0-D9-62-AE-20-48] || FECHA: Tue Nov 25 12:59:39 COT 2014
+Recibido INFORM de : [1C-3E-84-0F-A4-E5] || FECHA: Tue Nov 25 13:13:14 COT 2014
+Se envió DHCP_ACK unicast a: [1C-3E-84-0F-A4-E5] con la IP: [192.168.0.3] || FECHA: Tue Nov 25 13:13:14 COT 2014
+Recibido REQUEST de: [00-1A-73-68-C3-F5] || FECHA: Tue Nov 25 13:44:31 COT 2014
+Recibido INFORM de : [00-1A-73-68-C3-F5] || FECHA: Tue Nov 25 13:44:34 COT 2014
+Se envió DHCP_ACK unicast a: [00-1A-73-68-C3-F5] con la IP: [192.168.0.10] || FECHA: Tue Nov 25 13:44:34 COT 2014
+Recibido REQUEST de: [1C-3E-84-0F-A4-E5] || FECHA: Tue Nov 25 13:55:54 COT 2014
+Se envió DHCP_ACK a: [1C-3E-84-0F-A4-E5] con la IP: [192.168.0.3] || FECHA: Tue Nov 25 13:55:54 COT 2014
+Recibido INFORM de : [1C-3E-84-0F-A4-E5] || FECHA: Tue Nov 25 13:55:57 COT 2014
+Se envió DHCP_ACK unicast a: [1C-3E-84-0F-A4-E5] con la IP: [192.168.0.3] || FECHA: Tue Nov 25 13:55:57 COT 2014
+Recibido REQUEST de: [00-1A-73-68-C3-F5] || FECHA: Tue Nov 25 14:01:58 COT 2014
+Se envió DHCP_ACK a: [00-1A-73-68-C3-F5] con la IP: [192.168.0.10] || FECHA: Tue Nov 25 14:01:58 COT 2014
+Recibido INFORM de : [00-1A-73-68-C3-F5] || FECHA: Tue Nov 25 14:02:01 COT 2014
+Se envió DHCP_ACK unicast a: [00-1A-73-68-C3-F5] con la IP: [192.168.0.10] || FECHA: Tue Nov 25 14:02:02 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:44:25 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [192.168.0.2] || FECHA: Wed Nov 26 11:44:26 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:44:26 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [192.168.0.2] || FECHA: Wed Nov 26 11:44:26 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:44:32 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [192.168.0.2] || FECHA: Wed Nov 26 11:44:32 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:44:35 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [192.168.0.2] || FECHA: Wed Nov 26 11:44:35 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:44:49 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [192.168.0.2] || FECHA: Wed Nov 26 11:44:49 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:44:49 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [192.168.0.2] || FECHA: Wed Nov 26 11:44:49 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:44:56 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [192.168.0.2] || FECHA: Wed Nov 26 11:44:56 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:44:59 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [192.168.0.2] || FECHA: Wed Nov 26 11:44:59 COT 2014
+Recibido DISCOVERY de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 11:46:37 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-41-13-82] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 11:46:37 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 11:46:37 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 11:46:37 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:46:41 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.3] || FECHA: Wed Nov 26 11:46:41 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:46:41 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.3] || FECHA: Wed Nov 26 11:46:41 COT 2014
+Recibido INFORM de : [00-25-11-41-13-82] || FECHA: Wed Nov 26 11:46:43 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-41-13-82] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 11:46:43 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 11:46:44 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 11:46:44 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:46:48 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [169.254.0.3] || FECHA: Wed Nov 26 11:46:48 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 11:46:51 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 11:46:51 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:46:53 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.3] || FECHA: Wed Nov 26 11:46:53 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 11:46:58 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 11:46:58 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:47:00 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.3] || FECHA: Wed Nov 26 11:47:00 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 11:47:05 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 11:47:05 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:47:07 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.3] || FECHA: Wed Nov 26 11:47:07 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 11:47:12 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 11:47:12 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:47:13 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.3] || FECHA: Wed Nov 26 11:47:13 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 11:47:19 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 11:47:19 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:53:50 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 11:53:50 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:53:52 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 11:53:52 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:56:16 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 11:56:17 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:56:20 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 11:56:20 COT 2014
+Recibido DISCOVERY de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 11:56:23 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-41-13-82] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 11:56:23 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 11:56:23 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 11:56:23 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 11:56:27 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 11:56:27 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:56:28 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 11:56:28 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:56:28 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 11:56:28 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:58:54 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 11:58:54 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:58:54 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 11:58:54 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:59:00 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 11:59:00 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:59:01 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 11:59:01 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:59:07 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 11:59:07 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:59:15 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 11:59:15 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:59:22 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 11:59:22 COT 2014
+Recibido RELEASE de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:59:25 COT 2014
+Se liberó conexión de: [00-25-11-3F-B0-92] Dirección liberada: [0.0.0.0] || FECHA: Wed Nov 26 11:59:25 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:59:30 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 11:59:30 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:59:30 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 11:59:30 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 11:59:34 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 11:59:34 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:01:33 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:01:33 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:01:33 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:01:33 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:01:40 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:01:40 COT 2014
+Recibido RELEASE de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:01:40 COT 2014
+Se liberó conexión de: [00-25-11-3F-B0-92] Dirección liberada: [0.0.0.0] || FECHA: Wed Nov 26 12:01:40 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:01:47 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:01:47 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:01:47 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:01:47 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:01:50 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:01:50 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:01:58 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:01:58 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:02:16 COT 2014
+Recibido DISCOVERY de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:04:35 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-41-13-82] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:04:35 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:04:35 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:04:35 COT 2014
+Recibido INFORM de : [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:04:41 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-41-13-82] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:04:42 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:04:42 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:04:42 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:04:51 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:04:53 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:04:58 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:04:58 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:04:58 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:04:58 COT 2014
+Recibido DISCOVERY de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:05:03 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-41-13-82] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:05:03 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:05:03 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:05:03 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:05:04 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:05:04 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:05:05 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:05:05 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:05:06 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:05:06 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:09:04 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:09:04 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:09:04 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:09:04 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:09:10 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:09:10 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:09:11 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:09:11 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:09:17 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:09:17 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:09:25 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:09:25 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:09:32 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:09:32 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:09:39 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:09:39 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:09:46 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:09:46 COT 2014
+Recibido RELEASE de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:09:49 COT 2014
+Se liberó conexión de: [00-25-11-3F-B0-92] Dirección liberada: [0.0.0.0] || FECHA: Wed Nov 26 12:09:50 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:09:51 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:09:51 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:09:51 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:09:51 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:09:54 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:09:54 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:10:03 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:10:03 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:10:19 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:10:51 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:10:51 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:10:51 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:10:51 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:10:55 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:10:55 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:11:04 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:11:04 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:11:20 COT 2014
+Recibido DISCOVERY de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:13:01 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-41-13-82] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:13:01 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:13:01 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:13:01 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:13:04 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:13:04 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:13:10 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:13:10 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:13:26 COT 2014
+Recibido DISCOVERY de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:13:58 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-41-13-82] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:13:58 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:13:58 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:13:58 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:14:02 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:14:03 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:14:11 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:14:11 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:14:30 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:14:36 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:14:36 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:14:36 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:14:36 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:14:43 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:14:43 COT 2014
+Recibido RELEASE de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:14:45 COT 2014
+Se liberó conexión de: [00-25-11-3F-B0-92] Dirección liberada: [0.0.0.0] || FECHA: Wed Nov 26 12:14:45 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:14:47 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:14:47 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:14:47 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:14:47 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:14:51 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:14:51 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:25:42 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:25:42 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:25:42 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:25:42 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:25:49 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:25:49 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:25:50 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:25:50 COT 2014
+Recibido RELEASE de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:25:53 COT 2014
+Se liberó conexión de: [00-25-11-3F-B0-92] Dirección liberada: [0.0.0.0] || FECHA: Wed Nov 26 12:25:54 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:25:55 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:25:55 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:25:55 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:25:55 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:26:00 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:26:00 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:26:07 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:26:07 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:29:00 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:29:00 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:29:00 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:29:00 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:29:07 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:29:07 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:29:08 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:29:08 COT 2014
+Recibido RELEASE de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:29:11 COT 2014
+Se liberó conexión de: [00-25-11-3F-B0-92] Dirección liberada: [0.0.0.0] || FECHA: Wed Nov 26 12:29:11 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:29:13 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:29:13 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:29:13 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:29:13 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:29:17 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:29:17 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:29:23 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:29:24 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:29:38 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:29:38 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:29:45 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:29:45 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:29:46 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:29:46 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:29:53 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:29:53 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:30:00 COT 2014
+Recibido RELEASE de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:30:01 COT 2014
+Se liberó conexión de: [00-25-11-3F-B0-92] Dirección liberada: [0.0.0.0] || FECHA: Wed Nov 26 12:30:01 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:30:04 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:30:04 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:30:04 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:30:04 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:30:11 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:30:11 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:30:12 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:30:12 COT 2014
+Recibido RELEASE de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:30:15 COT 2014
+Se liberó conexión de: [00-25-11-3F-B0-92] Dirección liberada: [0.0.0.0] || FECHA: Wed Nov 26 12:30:15 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:30:16 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:30:16 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:30:16 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:30:16 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:30:19 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:30:19 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:30:27 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:30:27 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:30:42 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:30:42 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:30:49 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:30:49 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:30:50 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:30:50 COT 2014
+Recibido RELEASE de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:30:53 COT 2014
+Se liberó conexión de: [00-25-11-3F-B0-92] Dirección liberada: [0.0.0.0] || FECHA: Wed Nov 26 12:30:53 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:30:54 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:30:54 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:30:54 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:30:54 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:30:57 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:30:57 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:35:32 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:35:32 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:35:32 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:35:32 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:35:39 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:35:39 COT 2014
+Recibido RELEASE de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:35:41 COT 2014
+Se liberó conexión de: [00-25-11-3F-B0-92] Dirección liberada: [0.0.0.0] || FECHA: Wed Nov 26 12:35:41 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:35:45 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:35:45 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:35:45 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:35:45 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:35:49 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:35:50 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:35:58 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [0.0.0.0] || FECHA: Wed Nov 26 12:35:58 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:38:48 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:38:48 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:38:48 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:38:48 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:38:55 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:38:55 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:38:56 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:38:56 COT 2014
+Recibido RELEASE de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:38:59 COT 2014
+Se liberó conexión de: [00-25-11-3F-B0-92] Dirección liberada: [0.0.0.0] || FECHA: Wed Nov 26 12:38:59 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:39:01 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:39:01 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:39:01 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:39:01 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:39:08 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:39:12 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:39:22 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:39:22 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:39:22 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:39:22 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:39:29 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:39:29 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:39:34 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:39:37 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:39:43 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:39:43 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:39:43 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:39:43 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:39:50 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:39:50 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:39:55 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:39:58 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:40:04 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:40:04 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:40:04 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:40:04 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:40:11 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:40:11 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:40:16 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:40:19 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:40:25 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:40:25 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:40:25 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:40:25 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:40:32 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:40:32 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:40:37 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:40:40 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:44:35 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:44:35 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:44:35 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:44:35 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:44:42 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:44:42 COT 2014
+Recibido RELEASE de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:44:44 COT 2014
+Se liberó conexión de: [00-25-11-3F-B0-92] Dirección liberada: [0.0.0.0] || FECHA: Wed Nov 26 12:44:44 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:44:48 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:44:48 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:44:48 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:44:48 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:44:55 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:44:55 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:45:00 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:45:00 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:45:07 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:45:07 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:45:14 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:45:14 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:45:20 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:45:20 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:45:28 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:45:28 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:45:35 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:45:35 COT 2014
+Recibido DISCOVERY de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:45:37 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-41-13-82] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:45:37 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:45:37 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:45:37 COT 2014
+Recibido DECLINE de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:45:37 COT 2014
+Se liberó conexión de: [00-25-11-41-13-82] Dirección declinada: [0.0.0.0] || FECHA: Wed Nov 26 12:45:37 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:45:42 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:45:42 COT 2014
+Recibido DISCOVERY de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:45:47 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-41-13-82] con la IP: [169.254.0.3] || FECHA: Wed Nov 26 12:45:47 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:45:47 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.3] || FECHA: Wed Nov 26 12:45:47 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:45:49 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:45:49 COT 2014
+Recibido INFORM de : [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:45:54 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-41-13-82] con la IP: [169.254.0.3] || FECHA: Wed Nov 26 12:45:54 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:45:55 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.3] || FECHA: Wed Nov 26 12:45:55 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:45:55 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:45:55 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:46:02 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.3] || FECHA: Wed Nov 26 12:46:02 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:46:03 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:46:03 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:46:09 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.3] || FECHA: Wed Nov 26 12:46:09 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:46:10 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:46:10 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:46:15 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.3] || FECHA: Wed Nov 26 12:46:15 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:48:57 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:48:57 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:48:57 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:48:57 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:49:04 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:49:04 COT 2014
+Recibido RELEASE de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:49:08 COT 2014
+Se liberó conexión de: [00-25-11-3F-B0-92] Dirección liberada: [0.0.0.0] || FECHA: Wed Nov 26 12:49:08 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:49:21 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:49:21 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:49:21 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:49:21 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:49:28 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:49:28 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:49:29 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:49:29 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:49:36 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:49:36 COT 2014
+Recibido DISCOVERY de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:49:42 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-41-13-82] con la IP: [169.254.0.3] || FECHA: Wed Nov 26 12:49:42 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:49:42 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.3] || FECHA: Wed Nov 26 12:49:42 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:49:43 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:49:43 COT 2014
+Recibido INFORM de : [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:49:49 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-41-13-82] con la IP: [169.254.0.3] || FECHA: Wed Nov 26 12:49:49 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:49:49 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:49:49 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:49:50 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.3] || FECHA: Wed Nov 26 12:49:50 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:49:56 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:49:57 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:49:57 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.3] || FECHA: Wed Nov 26 12:49:57 COT 2014
+Recibido RELEASE de : [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:50:00 COT 2014
+Se liberó conexión de: [00-25-11-41-13-82] Dirección liberada: [0.0.0.0] || FECHA: Wed Nov 26 12:50:00 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:50:04 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:50:04 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:50:11 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:50:11 COT 2014
+Recibido DISCOVERY de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:50:14 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 12:50:14 COT 2014
+Recibido DISCOVERY de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:50:16 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 12:50:16 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:50:18 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:50:18 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:50:24 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:50:24 COT 2014
+Recibido DISCOVERY de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:50:24 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 12:50:24 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:50:24 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 12:50:24 COT 2014
+Recibido INFORM de : [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:50:31 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 12:50:31 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:50:32 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:50:32 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:50:32 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 12:50:32 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:50:39 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:50:39 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:50:39 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 12:50:39 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 12:50:46 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 12:50:46 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 12:50:46 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 12:50:46 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 13:01:20 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 13:01:20 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 13:01:20 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 13:01:20 COT 2014
+Recibido DISCOVERY de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 13:01:24 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 13:01:24 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 13:01:24 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 13:01:24 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 13:01:27 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 13:01:27 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 13:01:30 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 13:01:30 COT 2014
+Recibido RELEASE de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 13:01:30 COT 2014
+Se liberó conexión de: [00-25-11-3F-B0-92] Dirección liberada: [0.0.0.0] || FECHA: Wed Nov 26 13:01:30 COT 2014
+Recibido INFORM de : [00-25-11-41-13-82] || FECHA: Wed Nov 26 13:01:30 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 13:01:30 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 13:01:35 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 13:01:35 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 13:01:43 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 13:01:43 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 13:01:50 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 13:01:50 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 13:01:57 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 13:01:57 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 13:02:04 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 13:02:04 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 13:02:11 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 13:02:11 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 13:02:17 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 13:02:17 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 13:02:29 COT 2014
+Recibido DISCOVERY de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 13:02:35 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 13:02:35 COT 2014
+Recibido REQUEST de: [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 13:02:35 COT 2014
+Se envió DHCP_ACK a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 13:02:35 COT 2014
+Recibido DISCOVERY de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 13:02:37 COT 2014
+Se envió DHCP_OFFFER a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 13:02:37 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 13:02:37 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 13:02:37 COT 2014
+Recibido INFORM de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 13:02:42 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-3F-B0-92] con la IP: [169.254.0.2] || FECHA: Wed Nov 26 13:02:42 COT 2014
+Recibido RELEASE de : [00-25-11-3F-B0-92] || FECHA: Wed Nov 26 13:02:43 COT 2014
+Se liberó conexión de: [00-25-11-3F-B0-92] Dirección liberada: [0.0.0.0] || FECHA: Wed Nov 26 13:02:43 COT 2014
+Recibido INFORM de : [00-25-11-41-13-82] || FECHA: Wed Nov 26 13:02:44 COT 2014
+Se envió DHCP_ACK unicast a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 13:02:44 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 13:02:45 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 13:02:45 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 13:02:52 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 13:02:52 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 13:02:59 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 13:02:59 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 13:03:05 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 13:03:05 COT 2014
+Recibido REQUEST de: [00-25-11-41-13-82] || FECHA: Wed Nov 26 13:03:12 COT 2014
+Se envió DHCP_ACK a: [00-25-11-41-13-82] con la IP: [169.254.0.4] || FECHA: Wed Nov 26 13:03:13 COT 2014

@@ -27,7 +27,6 @@ public class Interfaz extends javax.swing.JFrame implements Observer {
 	private String[] s;
 	private DHCPDatabase database;
 
-
 	/** Creates new form Interfaz */
 	public Interfaz(DHCPDatabase database) {
 		this.database = database;
@@ -74,8 +73,7 @@ public class Interfaz extends javax.swing.JFrame implements Observer {
 				jButton3ActionPerformed(evt);
 			}
 		});
-		s = new String[] { "MAC", "IP", "Hora Inicio",
-				"Hora Vencimiento" };
+		s = new String[] { "MAC", "IP", "Hora Inicio", "Hora Vencimiento" };
 		defaultModel = new DefaultTableModel(null, s);
 		jTable1.setModel(defaultModel);
 
@@ -186,7 +184,6 @@ public class Interfaz extends javax.swing.JFrame implements Observer {
 		DHCPDatabase.imprimirDireccionesDisponibles();
 	}// GEN-LAST:event_button1ActionPerformed
 
-
 	/**
 	 * @param args
 	 *            the command line arguments
@@ -203,14 +200,13 @@ public class Interfaz extends javax.swing.JFrame implements Observer {
 	// End of variables declaration//GEN-END:variables
 	@Override
 	public synchronized void update(Observable arg0, Object arg1) {
-		defaultModel = new DefaultTableModel(null,s);
-		for(Clientes c : new ArrayList<Clientes>(database.getClientes().values())){
-			defaultModel.
-			addRow(new Object[]{c.getIdCliente(),
-					c.getDirIP(),
-					c.getHoraInicio(),
-					c.getHoraVencimiento()
-					
+		defaultModel = new DefaultTableModel(null, s);
+
+		for (Clientes c : new ArrayList<Clientes>(database.getClientes()
+				.values())) {
+			defaultModel.addRow(new Object[] { c.getIdCliente(), c.getDirIP(),
+					c.getHoraInicio(), c.getHoraVencimiento()
+
 			});
 		}
 		jTable1.setModel(defaultModel);

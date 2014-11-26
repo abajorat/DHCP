@@ -318,7 +318,6 @@ public class DHCPDatabase extends Observable {
 
 	public void sacarIP(String MAC, String ciaddr) {
 
-		
 		Clientes nuevo = new Clientes(MAC, ciaddr);
 		
 		synchronized(clientes){

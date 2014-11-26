@@ -267,18 +267,17 @@ public class ServidorDHCP extends Thread {
 			tempId = String.format("%d.%d.%d.%d", dirAux[0], dirAux[1],
 					dirAux[2], dirAux[3]);
 
-			if(tempId.equals(database.getOwnIp())){
+			if (tempId.equals(database.getOwnIp())) {
 				sendNak();
 				return;
 			}
 
-			else if (database.existeIp(tempId)) {
+			else if (!database.existeIp(tempId)) {
 
-				 database.sacarIP(
-				 pack.getStringHexa(pack.getCHADDR()),
-				 IPdesdeByte(pack.getCIADDR()));
-				
-				 } else {
+				database.sacarIP(pack.getStringHexa(pack.getCHADDR()),
+						getRequestedIP(pack));
+
+			} else {
 
 				tempId = database.getIPLibre(
 						pack.getStringHexa(pack.getCHADDR()),
@@ -409,14 +408,24 @@ public class ServidorDHCP extends Thread {
 											// servidor es respuesta a un offer
 			InetAddress idServidor = InetAddress.getByAddress(opServ
 					.getValues());
-			if (idServidor.equals(InetAddress.getLocalHost())
-					|| idServidor.equals(InetAddress.getByName("192.168.0.1"))) {
+			if (idServidor.equals(InetAddress.getLocalHost())) {
+				System.out.println("richtiger server");
 				// SI escogio este servidor, entonces continua
 				// Confiamos en que el cliente envia la direccion ofrecida en la
 				// opcion IP Request
 				// if(database.existeCliente(pack.getStringHexa(pack.getCHADDR())))
 				TempIP = database.getIPdeMAC(pack.getStringHexa(pack
 						.getCHADDR()));
+				if (TempIP == null) {
+
+					TempIP = getRequestedIP(pack);
+					System.out.println(TempIP);
+
+				} else {
+					System.out.println("kennt ihn schom");
+					System.out.println(TempIP);
+				}
+
 			} else {
 				// No escogio este servidor entonces se queda callado
 				return;
@@ -431,7 +440,7 @@ public class ServidorDHCP extends Thread {
 				TempIP = database.getIPdeMAC(pack.getStringHexa(pack
 						.getCHADDR()));
 			} else {
-				System.out.println("kennt keine sau");
+				System.out.println("kennt keine sau" + TempIP);
 				return;
 			}// Si no existe en la base de datos se queda callado
 
@@ -443,8 +452,8 @@ public class ServidorDHCP extends Thread {
 
 				unicast = pack.getCIADDR();
 			} else if (!ipPedida.equals(TempIP)) { // esta mal le envio un NAK
-					sendNak();
-					return;
+				sendNak();
+				return;
 			}
 
 		}
@@ -559,21 +568,18 @@ public class ServidorDHCP extends Thread {
 		}
 	}
 
-	private void sendNak() throws UnknownHostException, IOException{
+	private void sendNak() throws UnknownHostException, IOException {
 		PaqueteDHCP nak = generarNak(pack);
-		byte[] broadcast = { hexToByte("FF"), hexToByte("FF"),
-				hexToByte("FF"), hexToByte("FF") };// Broadcast
+		byte[] broadcast = { hexToByte("FF"), hexToByte("FF"), hexToByte("FF"),
+				hexToByte("FF") };// Broadcast
 		DatagramPacket ep = new DatagramPacket(nak.getData(),
-				nak.getLengthData(),
-				InetAddress.getByAddress(broadcast), 68);
+				nak.getLengthData(), InetAddress.getByAddress(broadcast), 68);
 		socket.send(ep);
-		System.out.println("NACK "
-				+ pack.getStringHexa(pack.getCHADDR()));
+		System.out.println("NACK " + pack.getStringHexa(pack.getCHADDR()));
 		DHCPlog.reportar("Se envió DHCP_NAK a: ["
-				+ pack.getStringHexa(pack.getCHADDR())
-				+ "]  || FECHA: " + new Date());
-		
-		
+				+ pack.getStringHexa(pack.getCHADDR()) + "]  || FECHA: "
+				+ new Date());
+
 	}
 
 	/**
@@ -617,7 +623,6 @@ public class ServidorDHCP extends Thread {
 	private void manejarInform() throws UnknownHostException, IOException {
 		String clientIP = IPdesdeByte(pack.getCIADDR());
 
-		
 		int subred = database.identificarSubRed(clientIP);
 		String giaddr = database.getGateway().get(subred);
 		if (subred != -1) {
@@ -660,9 +665,7 @@ public class ServidorDHCP extends Thread {
 			opt2[0] = (hexToByte(Integer.toHexString(1))); // Subnet Mask
 			opt2[1] = (hexToByte(Integer.toHexString(4))); // lenght
 			byte[] aux = new byte[4];
-			aux = pack.getIPOfStr(database.
-					getMascara().
-					get(
+			aux = pack.getIPOfStr(database.getMascara().get(
 					database.identificarSubRed(clientIP)));// máscara
 			opt2[2] = aux[0];
 			opt2[3] = aux[1];
@@ -773,7 +776,9 @@ public class ServidorDHCP extends Thread {
 			}
 			TempIP = String.format("%d.%d.%d.%d", dirAux[0], dirAux[1],
 					dirAux[2], dirAux[3]);
+			System.out.println(TempIP);
 		}
+
 		return TempIP;
 	}
 
