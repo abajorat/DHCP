@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Observable;
 import java.util.Observer;
 
+import javax.swing.SwingUtilities;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -200,18 +201,21 @@ public class Interfaz extends javax.swing.JFrame implements Observer {
 	// End of variables declaration//GEN-END:variables
 	@Override
 	public synchronized void update(Observable arg0, Object arg1) {
-		defaultModel = new DefaultTableModel(null, s);
+		
+		SwingUtilities.invokeLater(new Runnable(){public void run(){
+			defaultModel = new DefaultTableModel(null, s);
+			for (Clientes c : new ArrayList<Clientes>(database.getClientes()
+					.values())) {
+				defaultModel.addRow(new Object[] { c.getIdCliente(), c.getDirIP(),
+						c.getHoraInicio(), c.getHoraVencimiento()
 
-		for (Clientes c : new ArrayList<Clientes>(database.getClientes()
-				.values())) {
-			defaultModel.addRow(new Object[] { c.getIdCliente(), c.getDirIP(),
-					c.getHoraInicio(), c.getHoraVencimiento()
+				});
+			}
+			jTable1.setModel(defaultModel);
 
-			});
-		}
-		jTable1.setModel(defaultModel);
-
-		jScrollPane1.setViewportView(jTable1);
+			jScrollPane1.setViewportView(jTable1);
+		}});
+		
 
 	}
 

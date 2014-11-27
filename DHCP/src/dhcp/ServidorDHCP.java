@@ -409,7 +409,6 @@ public class ServidorDHCP extends Thread {
 			InetAddress idServidor = InetAddress.getByAddress(opServ
 					.getValues());
 			if (idServidor.equals(InetAddress.getLocalHost())) {
-				System.out.println("richtiger server");
 				// SI escogio este servidor, entonces continua
 				// Confiamos en que el cliente envia la direccion ofrecida en la
 				// opcion IP Request
@@ -419,15 +418,12 @@ public class ServidorDHCP extends Thread {
 				if (TempIP == null) {
 
 					TempIP = getRequestedIP(pack);
-					System.out.println(TempIP);
-
-				} else {
-					System.out.println("kennt ihn schom");
-					System.out.println(TempIP);
-				}
-
+				} 
 			} else {
 				// No escogio este servidor entonces se queda callado
+				System.out.println("No pregunta a este servidor sino a "+idServidor.toString());
+
+
 				return;
 			}
 
@@ -440,7 +436,7 @@ public class ServidorDHCP extends Thread {
 				TempIP = database.getIPdeMAC(pack.getStringHexa(pack
 						.getCHADDR()));
 			} else {
-				System.out.println("kennt keine sau" + TempIP);
+				System.out.println("DESCONOCIDO" + TempIP);
 				return;
 			}// Si no existe en la base de datos se queda callado
 
@@ -776,8 +772,7 @@ public class ServidorDHCP extends Thread {
 			}
 			TempIP = String.format("%d.%d.%d.%d", dirAux[0], dirAux[1],
 					dirAux[2], dirAux[3]);
-			System.out.println(TempIP);
-		}
+			}
 
 		return TempIP;
 	}

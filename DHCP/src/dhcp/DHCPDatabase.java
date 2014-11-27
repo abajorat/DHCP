@@ -251,7 +251,6 @@ public class DHCPDatabase extends Observable {
 			dirDisponibles.remove(direcciones[i].get(j));
 			setChanged();
 			notifyObservers();
-			System.out.println("getlibre sagt: " + direcciones[i].get(j));
 			return direcciones[i].get(j);
 		} else {
 			System.out.println("El array list esta vacio");
